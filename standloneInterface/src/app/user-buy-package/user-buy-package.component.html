@@ -1,0 +1,18 @@
+<app-user-header></app-user-header>
+<section class="places">
+  <div class="places-text">
+      <h2>Favourite Places</h2>
+  </div>
+  <div class="cards">
+      <div class="card" *ngFor="let product of packages; let i = index">
+          <div class="text">
+              <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+              <h2>{{product.packageName}}</h2>
+              <p class="cost">Rs. {{product.cost}} / Per Person</p>
+              <p class="location">Travelling Date: {{product.travellingDate}}</p>
+              <p class="location">&#9992; {{product.place}}, India</p>
+              <button class="card-box" (click)="onDelete(product.id)">Delete</button>
+          </div>
+      </div>
+  </div>
+</section>  

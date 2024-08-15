@@ -1,0 +1,28 @@
+<app-user-header></app-user-header>
+<section class="places">
+  <div class="places-text">
+      <h2>Favourite Places</h2>
+      <small>FEATURED TOURS PACKAGES</small>
+  </div>
+  <div class="cards">
+      <div class="card" *ngFor="let product of package; let i = index">
+          <div class="text">
+              <!-- <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span> -->
+              <h2>{{product.packageName}}</h2>
+              <p class="cost">Rs. {{product.cost}} / Per Person</p>
+              <p class="location">&#9992; {{product.place}}, India</p>
+              <button class="card-box" (click)="openPopup()">Buy Package</button>
+              <div class="popup-form-container" *ngIf="showPopup">
+                <!-- The popup form -->
+                 <div class="popup-form">
+                  <h2>Enter the travelling date</h2>
+                  <form (ngSubmit)="onProductBy(product)">
+                    Date of Travel: <input type="date" [(ngModel)]="date" name="date"  min="{{ today | date: 'yyyy-MM-dd' }}">
+                    <button type="submit">Submit</button>
+                  </form>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

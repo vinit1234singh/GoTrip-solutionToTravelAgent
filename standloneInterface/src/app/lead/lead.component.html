@@ -1,0 +1,20 @@
+<!-- HTML -->
+<app-header></app-header>
+<table class="dark-green-table" style="width: 100%; font-size: 18px;">
+  <thead>
+    <tr>
+      <th class="gold-header" style="width: 25%;">User Name</th>
+      <th class="gold-header" style="width: 25%;">Lead ID</th>
+      <th class="gold-header" style="width: 25%;">User ID</th>
+      <th class="gold-header" style="width: 25%;">Number of Packages</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of users; let i=index">
+      <td style="color: wheat;">{{u.userName}}</td>
+      <td style="color: wheat;">{{lead[i].leadId}}</td>
+      <td style="color: wheat;">{{lead[i].userId}}</td>
+      <td style="color: wheat;">{{lead[i].numberOfPackages}}</td>
+    </tr>
+  </tbody>
+</table>

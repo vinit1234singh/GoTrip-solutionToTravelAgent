@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<table class="table">
+  <thead>
+    <tr>
+      <!-- <th>ID</th> -->
+      <th>Subject</th>
+      <th>Description</th>
+      <th>Issue Date</th>
+      <th>Tour Package</th>
+      <th>Customer ID</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let message of filteredticket">
+      <!-- <td>{{ message.id }}</td> -->
+      <td>{{ message.subject }}</td>
+      <td>{{ message.description }}</td>
+      <td>{{ message.createdDate }}</td>
+      <td>{{ message.status }}</td>
+      <td>{{ message.senderId }}</td>
+      <td><button class="btn-reply" (click)="onButtonSubmit(message.id,message.senderId)">Reply</button></td>
+    </tr>
+  </tbody>
+</table>

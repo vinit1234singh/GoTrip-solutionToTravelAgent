@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <form>
+        <div>
+          <label>Email address<span>*</span></label>
+          <input type="text" placeholder="Email" [(ngModel)] = "email" name='email' ngModel #emailInput="ngModel" required maxlength="50" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+          <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+            <div *ngIf="emailInput.errors && emailInput.errors['required']">
+              <span>Email is required.</span>
+            </div>
+            <div *ngIf="emailInput.errors && emailInput.errors['pattern']">
+              <span>Invalid Email Format</span>
+            </div>
+          </div> 
+        </div>
+        <div>
+          <label>Password<span>*</span></label>
+          <input type="password" placeholder="Password" [(ngModel)] = "password" name="password" required ngModel #passwordInput="ngModel">
+          <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">
+            <div *ngIf="passwordInput.errors && passwordInput.errors['required']">
+              <span>Password is required.</span>
+            </div>
+          </div>
+        </div>
+        <p>
+          <input type="button" value="Login" (click)="OnLogin()" />
+        </p>
+      </form>
+    </div>
+  </div>
+  
+</div>
+<div class="signup-link">
+    <p>Don't have an account? <a [routerLink]="['/admin-signup']">Sign Up</a></p>
+  </div>

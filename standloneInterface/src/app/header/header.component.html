@@ -1,0 +1,12 @@
+<div class="container">
+  <header>
+    <h1>Welcome, {{firstName}}</h1>
+    <nav>
+      <ul>
+        <li *ngFor="let item of Navigation"><a [routerLink]="item.href">{{item.label}}</a></li>
+        <li (click)="onSubmit()">logout</li>
+      </ul>
+    </nav>
+  </header>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<table class="table">
+  <thead>
+    <tr>
+      <!-- <th>ID</th> -->
+      <th>Subject</th>
+      <th>Description</th>
+      <th>Issue Date</th>
+      <th>Status</th>
+      <th>Customer ID</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let message of historyticket">
+      <!-- <td>{{ message.id }}</td> -->
+      <td>{{ message.subject }}</td>
+      <td>{{ message.description }}</td>
+      <td>{{ message.createdDate }}</td>
+      <td>{{ message.status }}</td>
+      <td>{{ message.senderId }}</td>
+      <td>Not Required</td>
+    </tr>
+  </tbody>
+</table>

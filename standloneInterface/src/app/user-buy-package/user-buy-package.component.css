@@ -1,0 +1,147 @@
+/* 
+.navbar {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav li {
+    margin-right: 20px;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .nav a:hover {
+    color: #d6a373;
+  }
+  
+  .btn {
+    background-color: #d6a373;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #c98f65;
+  }
+  
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 40px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .card-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .card-body {
+    padding: 20px;
+  } */
+  .places-text {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .places-text small {
+    font-family: Roboto;
+    color: #FFC342;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  
+  .places-text h2 {
+    font-family: Barlow Condensed;
+    font-size: 55px;
+    color: #191D34;
+    letter-spacing: 1px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+  
+  .card {
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 80%;
+    height: auto;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .cards .text {
+    padding: 20px;
+    font-family: Barlow Condensed;
+    line-height: 50px;
+  }
+  
+  .cards .card-box {
+    display: flex;
+    flex-flow: row;
+    background-color: #fb3f3f;
+    font-size: 18px;
+    font-family: Roboto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .cards .time {
+    flex: 1;
+  }
+  
+  .cards .location {
+    flex: 2;
+  }
+  
+  .cards .cost {
+    color: #4CAFAD;
+    font-size: 20px;
+  }

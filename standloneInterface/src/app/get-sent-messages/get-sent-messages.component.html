@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Receiver ID</th>
+      <th>Sender ID</th>
+      <th>Issue Date</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let message of adminMessage">
+      <td>{{ message.id }}</td>
+      <td>{{ message.customerId }}</td>
+      <td>{{ message.adminId }}</td>
+      <td>{{ message.issueDate }}</td>
+      <td>{{ message.status }}</td>
+      <td>{{ message.priority }}</td>
+      <td>{{ message.message }}</td>
+    </tr>
+  </tbody>
+</table>

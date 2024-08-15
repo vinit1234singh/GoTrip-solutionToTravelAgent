@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card login">
+    <h2>User Login</h2>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <input type="text" placeholder="Username" [(ngModel)]="userName" name="userName" class="form-control" required>
+      <div *ngIf="loginForm.controls['userName'].touched && loginForm.controls['userName'].invalid">
+        <small *ngIf="loginForm.controls['userName'].errors?.['required']"><span>Username is required</span></small>
+      </div>
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password" class="form-control" required>
+      <div *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid">
+        <small *ngIf="loginForm.controls['password'].errors?.['required']"><span>Password is required</span></small>
+      </div>
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+      <div class="not-signed-up text-center">
+       <b> Not signed Up:   </b> <button class="btn btn-secondary" style="background-color: green;" (click)="onSignupSubmit()">SignUp</button>
+      </div>
+    </form>
+  </div>
+</div>

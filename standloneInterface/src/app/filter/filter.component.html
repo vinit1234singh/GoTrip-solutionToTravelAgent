@@ -1,0 +1,13 @@
+<p>Filter the Customer Using the filter ID</p>
+
+<input type="text" [(ngModel)] = "filter" >
+<button (click)="onsubmit()">submit</button>
+<div *ngIf="isEmpty===false">
+<ul *ngFor="let user of showList">
+    <li><b>Name:</b> {{user.userName}}</li>
+    <li><b>Address: </b>{{user.address}}</li>
+    <li><b>Age: </b>{{user.age}}</li>
+    <li><b>Contact Number: </b>{{user.mobileNo}}</li>
+    <li><b>Occupation: </b>{{user.occupation}}</li>
+</ul>
+</div>

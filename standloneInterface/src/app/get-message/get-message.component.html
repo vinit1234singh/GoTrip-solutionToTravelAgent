@@ -1,0 +1,25 @@
+<app-user-header></app-user-header>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Customer ID</th>
+      <th>Admin ID</th>
+      <th>Issue Date</th>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let message of adminMessage">
+      <td>{{ message.id }}</td>
+      <td>{{ message.customerId }}</td>
+      <td>{{ message.adminId }}</td>
+      <td>{{ message.issueDate }}</td>
+      <td>{{ message.status }}</td>
+      <td>{{ message.priority }}</td>
+      <td>{{ message.message }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,76 @@
+/* CSS */
+.wrapper {
+  background-color: #f7f7f7;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  padding: 20px;
+}
+
+.login-form h2 {
+  font-size: 24px;
+  color: #21552f;
+  margin-bottom: 20px;
+  text-align: center;
+}
+span{
+  color: red;
+}
+
+.login-form label {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.login-form input[type="button"] {
+  background-color: #21552f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form input[type="button"]:hover {
+  background-color: #333;
+}
+
+.signup-link {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.signup-link a {
+  color: #21552f;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  color: #333;
+  text-decoration: underline;
+}

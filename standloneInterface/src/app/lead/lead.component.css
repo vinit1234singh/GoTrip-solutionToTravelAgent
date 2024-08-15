@@ -1,0 +1,24 @@
+/* CSS */
+.dark-green-table {
+    background-color: #2F4F4F; /* dark green */
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .gold-header {
+    background-color: #d6a373; /* gold */
+    color: #21552f; /* dark green */
+    font-weight: bold;
+    padding: 15px;
+    border-bottom: 1px solid #21552f; /* dark green */
+  }
+  
+  .dark-green-table td {
+    padding: 15px;
+    border-bottom: 1px solid #2F4F4F; /* dark green */
+    text-align: center;
+  }
+  
+  .dark-green-table th, .dark-green-table td {
+    width: 25%;
+  }

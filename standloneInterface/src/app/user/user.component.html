@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="card login">
+    <h2>User Registration</h2>
+    <form (ngSubmit)="createUser()" #userForm="ngForm">
+      <input type="text" placeholder="Username" [(ngModel)]="userName" name="userName" id="userName" class="form-input" required>
+      <div *ngIf="userForm.controls['userName'].touched && userForm.controls['userName'].invalid">
+        <small *ngIf="userForm.controls['userName'].errors?.['required']"><span>User Name is required</span></small>
+      </div>
+
+      <input type="number" placeholder="Age(Ex: 21)" [(ngModel)]="age" name="age" id="age" class="form-input" required>
+      <div *ngIf="userForm.controls['age'].touched && userForm.controls['age'].invalid">
+        <small *ngIf="userForm.controls['age'].errors?.['required']"><span>Age is required</span></small>
+      </div>
+
+      <input type="text" placeholder="Address" [(ngModel)]="address" name="address" id="address" class="form-input" required>
+      <div *ngIf="userForm.controls['address'].touched && userForm.controls['address'].invalid">
+        <small *ngIf="userForm.controls['address'].errors?.['required']"><span>Address is required</span></small>
+      </div>
+
+      <input type="email" placeholder="Email" [(ngModel)]="email" name="email" id="email" class="form-input" required email>
+      <div *ngIf="userForm.controls['email'].touched && userForm.controls['email'].invalid">
+        <small *ngIf="userForm.controls['email'].errors?.['required']">Email is required</small>
+        <small *ngIf="userForm.controls['email'].errors?.['email']"><span>Invalid email address</span></small>
+      </div>
+
+      <input type="number" placeholder="Mobile Number" [(ngModel)]="mobileNo" name="mobileNo" id="mobileNo" class="form-input" required>
+        <div *ngIf="userForm.controls['mobileNo'].touched && userForm.controls['mobileNo'].invalid">
+          <small *ngIf="userForm.controls['mobileNo'].errors?.['required']"><span>Mobile No is required</span></small>
+        </div>
+      
+        <input type="password" placeholder="Password" [(ngModel)]="confirmpassword" name="password" id="password" class="form-input" required>
+        <div *ngIf="userForm.controls['password'].touched && userForm.controls['password'].invalid">
+          <small *ngIf="userForm.controls['password'].errors?.['required']"><span>Password is required</span></small>
+        </div>
+
+        <input type="password" placeholder="Confirm Password" [(ngModel)]="password" name="password" id="password" class="form-input" required>
+        <div *ngIf="userForm.controls['password'].touched && userForm.controls['password'].invalid">
+          <small *ngIf="userForm.controls['password'].errors?.['required']"><span>Confirm Password is required</span></small>
+        </div>
+
+        <input type="text" placeholder="Occupation" [(ngModel)]="occupation" name="occupation" id="occupation" class="form-input" required>
+        <div *ngIf="userForm.controls['occupation'].touched && userForm.controls['occupation'].invalid">
+          <small *ngIf="userForm.controls['occupation'].errors?.['required']"><span>Occupation is required</span></small>
+        </div>
+      <button type="submit" class="btn-submit" [disabled]="!userForm.valid">Create User</button>
+    </form>
+  </div>
+</div>

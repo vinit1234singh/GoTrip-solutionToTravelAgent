@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Package Name</th>
+      <th>Cost</th>
+      <th>Place</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let package of packages">
+      <td>{{ package.id }}</td>
+      <td>{{ package.packageName }}</td>
+      <td>{{ package.cost }}</td>
+      <td>{{ package.place }}</td>
+      <td>
+        <!-- <button (click)="editPackage(package)">Edit</button> -->
+        <button (click)="deletePackage(package)">Delete</button>
+      </td>
+    </tr>
+  </table>

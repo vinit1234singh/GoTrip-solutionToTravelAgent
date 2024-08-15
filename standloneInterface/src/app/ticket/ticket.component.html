@@ -1,0 +1,37 @@
+<app-user-header></app-user-header>
+
+<div class="ticket-form-container">
+  <h2>Raise Your Ticket</h2>
+  <form (ngSubmit)="onSubmit()" #ticketform="ngForm">
+    <div class="form-group">
+      <label for="subject">Subject:</label>
+      <input id="subject" name="subject" [(ngModel)]="subject" type="text" class="form-control large-textbox" required placeholder="Ex: Regarding Chennai tour Package"/>
+      <div *ngIf="ticketform.controls['subject'].touched && ticketform.controls['subject'].hasError('required')">
+        <small><span>Subject is required</span></small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="description" class="form-control large-textbox" required placeholder="Ex: Shuttle is not provided between Ooty and mettupalayam"></textarea>
+      <div *ngIf="ticketform.controls['description'].touched && ticketform.controls['description'].hasError('required')">
+        <small><span>Description is required</span></small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="status">Tour Package:</label>
+      <select id="status" name="status" [(ngModel)]="status" class="form-control" required>
+        <option *ngFor="let statusOption of products" [value]="statusOption.travellingDate+':'+statusOption.packageName">
+          {{ statusOption.travellingDate }}: {{statusOption.packageName}}
+        </option>
+      </select>
+      <div *ngIf="ticketform.controls['status'].touched && ticketform.controls['status'].hasError('required')">
+        <small><span>Status is required</span></small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="senderId">User ID:</label>
+      <input id="senderId" disabled="true" name="senderId" [(ngModel)]="senderId" type="number" class="form-control"/>
+    </div>
+    <button type="submit" class="submit-btn btn btn-primary" [disabled]="!(subject && description && status)">Submit</button>
+  </form>
+</div>

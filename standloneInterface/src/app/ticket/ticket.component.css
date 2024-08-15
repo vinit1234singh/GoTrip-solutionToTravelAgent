@@ -1,0 +1,57 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.ticket-form-container {
+  background-color: #f9e772;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(231, 141, 141, 0.1);
+  margin: 40px;
+  border-radius: 5px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #050505;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #000000;
+  font-size: large;
+}
+span{
+  color: red;
+}
+
+.form-control {
+  width: 100%;
+  /* padding: 10px; */
+  font-size: 16px;
+  border: 1px solid #fcf238;
+  margin-right: 70px;
+  border-radius: 5px;
+}
+
+.large-textbox {
+  height: 100px;
+}
+
+.submit-btn {
+  background-color: #b2af1a;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #3eff09;
+}

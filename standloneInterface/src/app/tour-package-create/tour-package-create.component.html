@@ -1,0 +1,22 @@
+<app-header></app-header>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="packageName">Package Name:</label>
+      <input type="text" [(ngModel)]="package.packageName" required name="package.packageName" class="form-control">
+      <span style="color: #d6a373;" >{{messageOfPackage}}</span>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="cost">Cost:</label>
+      <input type="number" [(ngModel)]="package.cost" required name="package.cost" min="0" pattern="[0-9]*" (ngModelChange)="onCostChange()" class="form-control">
+      <span style="color: #d6a373;" >{{message}}</span>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="place">Place:</label>
+      <input type="text" [(ngModel)]="package.place" required name="package.place" class="form-control">
+      <span style="color: #d6a373;" >{{messageOfPlace}}</span>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

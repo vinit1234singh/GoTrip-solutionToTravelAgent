@@ -1,0 +1,13 @@
+<section class="nav-bar">
+    <div class="logo">Welcome, {{userName}} !!</div>
+    <ul class="menu">
+        <li><a routerLink="/userDashBoard" class="btn btn-primary">Dashboard</a></li>
+        <li><a routerLink="/ticket" class="btn btn-primary">Raise Ticket</a></li>
+        <li><a routerLink="/userOutbox" class="btn btn-primary">Outbox</a></li>
+        <li><a routerLink="/userInbox" class="btn btn-primary">Inbox</a></li>
+        <li><a routerLink="/userPackage" class="btn btn-primary">User Packages</a></li>
+        <li><a routerLink="/home" (click)="onSubmitLog()" class="btn btn-primary">LogOut</a></li>
+    </ul>
+    
+  <router-outlet></router-outlet>
+</section>
