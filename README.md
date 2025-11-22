@@ -77,14 +77,7 @@ This project demonstrates the ability to:
 - Create a **modern Angular UI** with Material components and utility-first styling (Tailwind).  
 - Integrate and handle **third‑party payment gateways** (Stripe) end-to-end.  
 - Work with **modular codebases** (separate backend and frontend) and Git-based workflows.
-
-## Possible Improvements / Roadmap
-
-- JWT-based authentication and refresh tokens.  
-- Multi-tenant support for multiple travel agencies.  
-- Advanced analytics dashboards for bookings and revenue.  
-- Email/SMS notifications for booking confirmations and reminders.  
-- Dockerization and CI/CD pipeline for deployment.  
+ 
 
 ## Contact
 
@@ -92,8 +85,6 @@ This project is part of a personal portfolio to showcase full‑stack Java + Ang
 
 - **Author:** Vinit Singh  
 - **GitHub:** [https://github.com/vinit1234singh](https://github.com/vinit1234singh)  
-- **LinkedIn:** *(add your LinkedIn URL here)*  
 
 ---
 
-If you share your database choice (e.g. MySQL with specific DB name) and how you configured Stripe, a customized “Configuration” section can be added to make it look even more production-ready.
